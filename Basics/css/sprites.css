@@ -1,0 +1,44 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+.sprite {
+  background: url('/img/emojis.png');
+  background-size: 750px 500px;
+
+}
+
+.happy {
+  background-position: -250px -270px;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+
+}
+
+.boss {
+  background-position: -20px -270px;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+
+}
+
+.sad {
+  background-position: -470px 0;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+
+}
+
+.happy:hover {
+  background: url('/img/emojis.png') -250px -270px;
+}
+
+.boss:hover {
+  background: url('/img/emojis.png') -20px -270px;
+}
+
+.sad:hover {
+  background: url('/img/emojis.png') 0 0;
+}
+

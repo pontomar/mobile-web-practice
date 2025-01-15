@@ -18,158 +18,87 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  margin: 5vw;
   font-family: -apple-system, BlinkMacSystemFont,
   "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
   "Fira Sans", "Droid Sans", "Helvetica Neue",
   sans-serif;
 }
 
-#animations{
-  animation-name: change-color, grow-shrink, expand;
-  animation-duration: 8s, 5s, 5s;
-  animation-iteration-count: 10;
-  text-align: center;
+#positioning {
+  float: right;
+  padding-left: 30px;
+  width: 50vw;;
 }
-
-div{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  column-width: 20vw ;
-}
-
-svg {
-  margin-top: 0; /* Remove space above the SVG */
-}
-@keyframes change-color {
-  25% {
-    color: #00A4BD;
-  }
-  50% {
-    color: #FF7A59;
-  }
-  75% {
-    color: #00BDA5;
-  }
-}
-
-@keyframes grow-shrink {
-  50% {
-    transform: scale(1.5);
-  }
-}
-
-@keyframes expand {
-  50% {
-    word-spacing: 20px;
-  }
-}
-
 
 p {
   margin-bottom: 5px;
 }
 
-.box{
-  background-color: lightgray;
-  padding: 20px;
-  margin: 20px;
-  width: 40vw;
-  overflow: scroll;
+section {
+  margin: 3rem 0 3rem 0;
+
 }
 
-#oval{
-  background: #00BDA5;
-  color: #ffffff;
+
+div {
+  display: flex; /* Child Elements can easily be aligned and distributed */
+  /* We could also set flex-direction: row or column */
+  flex-direction: column;
+
+}
+
+.multipleBox {
+  display: flex; /* Enable Flexbox layout */
+  flex-wrap: wrap; /* Allow wrapping of items */
+  justify-content: flex-start; /* Optional, adjust alignment of items */
+  gap: 10px; /* Optional, spacing between flex items */
+}
+
+@media (max-width: 768px) {
+  .multipleBox {
+    flex-direction: column; /* Stack items in column layout on small screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .multipleBox {
+    flex-direction: row; /* Arrange items in row layout on larger screens */
+  }
+}
+
+svg {
+  margin-top: 0; /* Remove space above the SVG */
+}
+
+
+.box {
+  background-color: lightgray;
   padding: 20px;
+  margin: 20px 20px 20px 0;
+  width: 35vw;
+}
+
+.box img {
+  width: 35vw;
+
+}
+
+#oval {
+  margin: 2rem;
+  padding: 10rem;
+  width: 15vw;
+  height: 15vw;
+  float: right;
+  background: lightblue;
+  color: #333333;
   border-radius: 80%;
   border: 5px solid #555555;
   text-align: center;
-  height: 40vh;
-}
+  overflow: auto;
 
-img {
-  width: 40vw;
-  max-width: 100vw;
-}
-
-#emojis{
-  position: relative;
-}
-
-#emojis li{
-  margin:0;
-  padding:0;
-  list-style: none;
-  position:absolute;
-  top:0;
-}
-
-#happy {
-  left: 0;
-  width:60px;
-  background: url('img/svg/emojis_grid.svg') 0 0;
-
-}
-
-.transition {
-  background: bisque;
-  transition-property: background;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-}
-
-.transition:hover {
-  background: darkorange;
-}
-
-.transformation {
-  background: bisque;
-  transition-property: all;
-  transition-duration: 2s;
-  transition-timing-function: ease;
-}
-
-.transformation:hover {
-  background: rebeccapurple;
-  transform: scaleX(80);
-  /* scale(), scaleX(), scaleY(), rotate(), skew(), translate(), ...*/
-}
-
-.rectangle {
-  transform-property: all;
-  transition-duration: 2s;
-  transition-timing-function: ease-in-out;
-}
-
-.rectangle:hover {
-  transform-origin: 0 0;
-  transform: translate(-10px, -20px) scale(2) rotate(45deg);
-}
-
-@keyframes pulse {
-
-  0% {
-    transform: scale(0.5);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);;
-  }
-  50% {
-    transform: scale(1.00);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-
-}
-
-input[type="text"]:focus {
-  animation-name: pulse;
-  animation-duration: 5.0s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  outline: none;
 }
 
 

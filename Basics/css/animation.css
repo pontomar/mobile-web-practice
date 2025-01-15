@@ -1,0 +1,96 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+#animations {
+  animation-name: change-color, grow-shrink, expand;
+  animation-duration: 8s, 5s, 5s;
+  animation-iteration-count: 10;
+  text-align: center;
+}
+
+
+@keyframes change-color {
+  25% {
+    color: #00A4BD;
+  }
+  50% {
+    color: #FF7A59;
+  }
+  75% {
+    color: #00BDA5;
+  }
+}
+
+@keyframes grow-shrink {
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes expand {
+  50% {
+    word-spacing: 20px;
+  }
+}
+
+
+.transition {
+  background: bisque;
+  transition-property: background;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.transition:hover {
+  background: darkorange;
+}
+
+.transformation {
+  background: bisque;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+}
+
+.transformation:hover {
+  background: rebeccapurple;
+  transform: scaleX(80);
+  /* scale(), scaleX(), scaleY(), rotate(), skew(), translate(), ...*/
+}
+
+.rectangle {
+  transform-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
+
+.rectangle:hover {
+  transform-origin: 0 0;
+  transform: translate(-10px, -20px) scale(2) rotate(45deg);
+}
+
+@keyframes pulse {
+
+  0% {
+    transform: scale(0.5);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);;
+  }
+  50% {
+    transform: scale(1.00);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+
+}
+
+input[type="text"]:focus {
+  animation-name: pulse;
+  animation-duration: 5.0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  outline: none;
+}
+
+
