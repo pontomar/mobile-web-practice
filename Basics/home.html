@@ -5,128 +5,125 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hi, responsive Mobile Web.</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/flexbox.css">
+
 </head>
 <body>
 <header>
-  <h1>Basic Elements of the (responsive) Web.</h1>
-  <p><a href="home.html">Ex1</a> -
-    <a href="home.html">Ex2</a> -
-    <a href="home.html">Ex3</a></p>
-
-  <p>Last Modified: <span itemprop="dateModified">2025-11-01</span></p>
-
-  <nav>
-    <h1>Navigation</h1>
+  <nav class="flex-nav">
     <ul>
-      <li><a href="home.html">Basic Elements</a></li>
+      <li><a href="home.html">Basics</a></li>
       <li><a href="layout.html">Layout</a></li>
       <li><a href="styling.html">Styling</a></li>
     </ul>
   </nav>
+  <h1>Basic Elements of the (responsive) Web.</h1>
+  <p>Last Modified: <span itemprop="dateModified">2025-15-01</span></p>
 </header>
-<section>
-  <h2>Progress Bars</h2>
-  <p>Your score is
-    <meter min="0" max="100"
-           value="95">A+
-    </meter>
-  </p>
+  <section>
+    <h2>Progress Bars</h2>
+    <p>Your score is
+      <meter min="0" max="100"
+             value="95">A+
+      </meter>
+    </p>
 
-  <p>Download is
-    <progress>working...</progress>
-  </p>
+    <p>Download is
+      <progress>working...</progress>
+    </p>
 
-  <p>Goal is
-    <progress value="75" max="100">3/4 complete</progress>
-  </p>
-</section>
+    <p>Goal is
+      <progress value="75" max="100">3/4 complete</progress>
+    </p>
+  </section>
 
-<section>
-  <h2>Time</h2>
-  <time>2025-01-10</time>
-  <br>
-  <time datetime="17:00">5pm</time>
-  <br>
-  <time datetime="2025-01-10">January 10th</time>
-  <time datetime="2025-01-10T17:00">5pm on January 10th</time>
-</section>
+  <section>
+    <h2>Time</h2>
+    <time>2025-01-10</time>
+    <br>
+    <time datetime="17:00">5pm</time>
+    <br>
+    <time datetime="2025-01-10">January 10th</time>
+    <time datetime="2025-01-10T17:00">5pm on January 10th</time>
+  </section>
 
-<!-- Often there's no space for labels, use placeholders instead -->
-<section>
-  <h2>Forms</h2>
-  <form>
-    <input type="text" placeholder="Your name..." id="name">
-    <input type="text" placeholder="Your age..." id="age">
-    <input type="submit" value="Send">
-  </form>
-<br>
-  <form>
-    <input type="password" placeholder="Enter your password.." minlength="8" maxlength="20" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,20}$">
-  </form>
-<br>
-  <form>
-    <input type="date">
-  </form>
-</section>
+  <!-- Often there's no space for labels, use placeholders instead -->
+  <section>
+    <h2>Forms</h2>
+    <form>
+      <input type="text" placeholder="Your name..." id="name">
+      <input type="text" placeholder="Your age..." id="age">
+      <input type="submit" value="Send">
+    </form>
+    <br>
+    <form>
+      <input type="password" placeholder="Enter your password.." minlength="8" maxlength="20"
+             pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,20}$">
+    </form>
+    <br>
+    <form>
+      <input type="date">
+    </form>
+  </section>
 
-<section>
-<h2>Responsive Images</h2>
-<!-- If the browser supports srcset, it evaluates srcset and picks the ideal image,
- else src is used as a fallback. -->
-<picture>
-  <source media="(min-width: 960px)"
-          srcset="img/calm_large.jpg">
+  <section>
+    <h2>Responsive Images</h2>
+    <!-- If the browser supports srcset, it evaluates srcset and picks the ideal image,
+     else src is used as a fallback. -->
+    <picture>
+      <source media="(min-width: 960px)"
+              srcset="img/calm_large.jpg">
 
-  <!-- For medium screens (less than 960px), use the medium image -->
-  <source media="(min-width: 480px)"
-          srcset="img/calm_medium.jpg">
+      <!-- For medium screens (less than 960px), use the medium image -->
+      <source media="(min-width: 480px)"
+              srcset="img/calm_medium.jpg">
 
-  <!-- For small screens (less than 480px), use the small image -->
-  <source srcset="img/calm_small.jpg">
+      <!-- For small screens (less than 480px), use the small image -->
+      <source srcset="img/calm_small.jpg">
 
-  <img src="img/calm_medium.jpg" alt="Calm picture by the water.">
-</picture>
-</section>
+      <img src="img/calm_medium.jpg" alt="Calm picture by the water.">
+    </picture>
+  </section>
 
-<h3>Vector Graphics: SVG</h3>
+  <h3>Vector Graphics: SVG</h3>
 
-<svg>
-  <rect x="20" y="20" width="100" height="100"
-        fill="blue" stroke="black" stroke-width="5px"
-        rx="8" ry="8" id="myRect" class="chart"></rect>
-  <rect x="60" y="60" width="100" height="100"
-        fill="yellow" stroke="green"
-        stroke-width="5px" rx="8" ry="8"
-        style="fill-opacity: 0.5"
-        id="myRect2" class="chart"/>
-</svg>
+  <svg>
+    <rect x="20" y="20" width="100" height="100"
+          fill="blue" stroke="black" stroke-width="5px"
+          rx="8" ry="8" id="myRect" class="chart"></rect>
+    <rect x="60" y="60" width="100" height="100"
+          fill="yellow" stroke="green"
+          stroke-width="5px" rx="8" ry="8"
+          style="fill-opacity: 0.5"
+          id="myRect2" class="chart"/>
+  </svg>
 
-<!-- Using the Graphics API: -->
-<h3>Vector Graphics: Canvas</h3>
-<canvas width="120" height="60"></canvas>
-<script>
-  let canvas = document.querySelector("canvas")
-  let context = canvas.getContext("2d")
+  <!-- Using the Graphics API: -->
+  <h3>Vector Graphics: Canvas</h3>
+  <canvas width="120" height="60"></canvas>
+  <script>
+    let canvas = document.querySelector("canvas")
+    let context = canvas.getContext("2d")
 
-  context.fillStyle = "purple"
-  context.fillRect(10, 10, 100, 50)
-</script>
+    context.fillStyle = "purple"
+    context.fillRect(10, 10, 100, 50)
+  </script>
 
-<h2>Video, Audio </h2>
+  <h2>Video, Audio </h2>
 
-<figure>
-  <figcaption>Somewhere Peaceful</figcaption>
-  <video width="640" height="480" controls="controls" preload="none">
-    <source src="media/sea.mp4" type="video/mp4"/>
-    <object data="" width="320" height="240"></object>
-  </video>
-</figure>
+  <figure>
+    <figcaption>Somewhere Peaceful</figcaption>
+    <video width="640" height="480" controls="controls" preload="none">
+      <source src="media/sea.mp4" type="video/mp4"/>
+      <object data="" width="320" height="240"></object>
+    </video>
+  </figure>
 
-<figure>
-  <figcaption>Relax, and listen to some waves.</figcaption>
-  <audio src="media/sea_waves.mp3" controls>
-  </audio>
-</figure>
+  <figure>
+    <figcaption>Relax, and listen to some waves.</figcaption>
+    <audio src="media/sea_waves.mp3" controls>
+    </audio>
+  </figure>
 </body>
 </html>
 

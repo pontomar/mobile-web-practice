@@ -1,0 +1,90 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+.flex-nav ul{
+  list-style: none;
+  background: #023047;
+  margin:0;
+  padding: 1rem;
+  display: flex;
+  width: 100%
+}
+
+.flex-nav li{
+  font-weight: bold;
+  flex: 3;
+  color: white;
+}
+
+.flex-nav a {
+  color: white; /* Set the link text color to white */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Change the color of visited links if needed */
+.flex-nav a:visited {
+  color: white; /* Ensure visited links are also white */
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  border: 10px solid goldenrod;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
+
+}
+
+.element {
+  padding: 10px;
+  text-align: center;
+  color: white;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  font-size: 100px;
+  order: 1;
+  width: 33.33333333%
+}
+
+.element1 {
+  background: #023047;
+}
+
+.element2 {
+  background: #ffb703;
+}
+
+.element3 {
+  background: #fb8500;
+}
+
+.element4 {
+  background: #219ebc;
+}
+
+.element5 {
+  background: #8ecae6;
+}
+
+.element6 {
+  background: #588157;
+}
+
+
+.element7 {
+  background: #dda15e;
+}
+
+.element8 {
+  background: #8d99ae;
+}
+
+
+.element9 {
+  background: #c1121f;
+}
+
+.element10 {
+  background: #5f0f40;
+}
