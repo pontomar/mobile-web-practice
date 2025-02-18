@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Basics.iml" filepath="$PROJECT_DIR$/Basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Component Driven UIs/Component Driven UIs.iml" filepath="$PROJECT_DIR$/Component Driven UIs/Component Driven UIs.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/MobileWebPractice.iml" filepath="$PROJECT_DIR$/.idea/MobileWebPractice.iml" />
     </modules>
   </component>
